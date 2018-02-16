@@ -10,7 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216095923) do
+ActiveRecord::Schema.define(version: 20180216111248) do
+
+  create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "pname"
+    t.datetime "hospitalization"
+    t.string   "roomno"
+    t.datetime "birthday"
+    t.integer  "age"
+    t.integer  "gender"
+    t.integer  "bloodtype"
+    t.float    "height",          limit: 24
+    t.float    "weight",          limit: 24
+    t.integer  "infection"
+    t.integer  "aid"
+    t.string   "attention"
+    t.string   "post"
+    t.string   "kana"
+    t.string   "address"
+    t.string   "food"
+    t.string   "keyp1"
+    t.string   "keyp2"
+    t.string   "keyp3"
+    t.string   "keyg1"
+    t.string   "keyg2"
+    t.string   "keyg3"
+    t.text     "ptn01",           limit: 65535
+    t.text     "ptn02",           limit: 65535
+    t.text     "ptn03",           limit: 65535
+    t.text     "ptn04",           limit: 65535
+    t.text     "ptn05",           limit: 65535
+    t.text     "ptn06",           limit: 65535
+    t.text     "ptn07",           limit: 65535
+    t.text     "ptn08",           limit: 65535
+    t.text     "ptn09",           limit: 65535
+    t.text     "ptn10",           limit: 65535
+    t.text     "ptn11",           limit: 65535
+    t.text     "ptn12",           limit: 65535
+    t.text     "ptn13",           limit: 65535
+    t.text     "ptn14",           limit: 65535
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"

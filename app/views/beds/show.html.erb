@@ -1,0 +1,88 @@
+<!-- 患者掲示板 -->
+
+
+
+<div class="keiji">
+
+  <body>
+
+        <div class="ao">&ensp;&ensp;患者掲示板 ─ <%= @patient.pname %></div>
+
+<div class="container">
+<div class="row">
+
+<font size="4">
+<div class="id">
+  <%= @patient.id %></div>
+ <div class="name">
+ <%= @patient.pname %></div>
+<div class="gender">
+  <%= @patient.gender %></div>
+<div class="birth">
+  <%= @patient.birthday .strftime("%Y-%m-%d") %></div>
+<div class="age">
+  <%= @patient.age %>歳</div>
+</font>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+
+<div class="space1"></div>
+<div class="space2">
+<br><br><br><a href="../sitemaps/<%= @patient.id %>"><img src="../images/close_btn.png" border="0"></a>
+</div>
+
+<div class="space3"></div>
+<div class="space4"></div>
+
+<div class="col-md-5">
+  
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">2018/01/15 15:30 看護花子【1年間】</div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item"><%= simple_format(@patient.attention) %></li>
+    <li class="list-group-item"><%= simple_format(@patient.post) %></li>
+  </ul>
+</div>
+  
+
+</div>
+
+</div>
+
+</div>
+
+  </body>
+</div>
+
+
+<div class="aside">
+<div class="space10">
+<a href="/" class="btn btn-warning active" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+</div>
+
+<div class="space5">
+
+<a href="/patients/1"><font size="2"><%= @name1 %></font></a><br>
+<a href="/patients/3"><font size="2"><%= @name3 %></font></a><br>
+<a href="/patients/4"><font size="2"><%= @name4 %></font></a><br>
+<a href="/patients/5"><font size="2"><%= @name5 %></font></a><br>
+<a href="/patients/7"><font size="2"><%= @name7 %></font></a><br>
+<br>
+<br>
+<br>
+<br>
+<a href="../patients/<%= @patient.id %>">経過表</a><br>
+<a href="../ninstructions/<%= @hensu2 + @patient.id %>">看護指示</a><br>
+<a href="../dinstructions/<%= @patient.id %>">指示簿一覧</a><br>
+<a href="../plans/<%= @patient.id %>">看護計画</a><br>
+<a href="../schedules">患者スケジュール</a><br>
+<a href="../nprofs/<%= @patient.id %>">看護プロファイル</a><br>
+<a href="../toppages/<%= @patient.id %>/foods/<%= @patient.id %>">移動食事カレンダ</a><br>
+<a href="../toppages/<%= @patient.id %>">掲示板</a><br>
+
+</div>
+</div>
+        

@@ -1,0 +1,118 @@
+<!-- 経過票 -->
+
+<div class="boxContainer">
+<div class="page-header">
+        <div class="headbox01">入院 病棟<br>緩和ケア</div>
+        <div class="headbox02">
+          <p class="sample1">ID : <%= @patient.id %><br>
+        ②後期　本人（30%）</p>
+        </div>
+        
+        <div class="headbox03">
+          <% if @patient.gender == '男' %>
+          <%= image_tag 'men.png', :title => '男性', :size => '100x50', :style=>"float:left;" %><br>
+          <% else %>
+          <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
+          <% end %>
+   
+<!--        <%= @patient.kana %><br>  -->
+          <font size="5"><u>
+            <ruby>
+            <rb><%= @patient.pname %></rb>
+            <rp>（</rp><rt><%= @patient.kana %></rt><rp>）</rp>
+            </ruby>
+          </u></font></div>
+        <div class="headbox05">
+          <% if @patient.infection == '有' %>
+          <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
+          <% else %>
+          <%= image_tag 'alrt_n.png', :title => '感染症未確認', :size => '40x40', :style=>"float:left;" %><br>
+          <% end %>
+        </div>
+        <div class="headbox05">
+          <% if @patient.id == 3 %>
+          <%= image_tag 'arg_y.png', :title => '青魚禁', :size => '40x40', :style=>"float:left;" %><br>
+          <% else %>
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+          <% end %>
+        </div>
+        <div class="headbox04">
+          <%= @patient.age %>歳00ヶ月&ensp;&ensp;&ensp;<%= @patient.bloodtype %>型Rh(+)&ensp;&ensp;&ensp;<u><%= @patient.height %>cm&ensp;<%= @patient.weight %>Kg</u></div>
+        <div class="headbox05">
+          <p class="sample1">
+<a href="/profiles/<%= @patient.id %>" class="btn btn-default btn-sm active" role="button">Prof</a><br>
+<a href="/profiles/<%= @patient.id %>" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
+          </p></div>
+<div class="headbox05">
+<a href="/beds" class="btn btn-warning btn-sm active" role="button">カルテ<br>閉じる</a>
+
+</div>
+</div>
+
+
+<div class="aside">
+<div class="space10">
+<a href="/" class="btn btn-warning active" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+</div>
+
+<div class="space5">
+<a href="/patients/1"><font size="2"><%= @name1 %></font></a><br>
+<a href="/patients/3"><font size="2"><%= @name3 %></font></a><br>
+<a href="/patients/4"><font size="2"><%= @name4 %></font></a><br>
+<a href="/patients/5"><font size="2"><%= @name5 %></font></a><br>
+<a href="/patients/7"><font size="2"><%= @name7 %></font></a><br>
+<br>
+<br>
+<br>
+<br>
+<a href="../patients/<%= @patient.id %>">経過表</a><br>
+<a href="../ninstructions/<%= @hensu2 + @patient.id %>">看護指示</a><br>
+<a href="../dinstructions/<%= @patient.id %>">指示簿一覧</a><br>
+<a href="../plans/<%= @patient.id %>">看護計画</a><br>
+<a href="../schedules">患者スケジュール</a><br>
+<a href="../nprofs/<%= @patient.id %>">看護プロファイル</a><br>
+<a href="../beds/<%= @patient.id %>/foods/<%= @patient.id %>">移動食事カレンダ</a><br>
+<a href="../beds/<%= @patient.id %>">掲示板</a><br>
+
+
+</div>
+</div>
+
+  <div class="cover01">
+  <div class="ao">一般経過表 <%= @patient.pname %></div>
+  </div>
+
+<div class="kenon01">
+<!-- グラフ-->
+<div class="kenon"><img src="../images/bp_1aa.png"><a href="../vitals/<%= @patient.id %>"><img src="../images/bp_<%= @patient.id %>a.png"></a><img src="../images/bp_ba.png"></div>
+<!-- 酸素から処置まで-->
+<div class="kenon"><img src="../images/bp_<%= @patient.id %>b.png"></div>
+<!-- 看護処置 -->
+<div id="a1" class="kenon"><img src="../images/bp_<%= @patient.id %>cc.png"><a href="../ninstructions/<%= @patient.id %>"><img src="../images/bp_<%= @patient.id %>c.png"></a><a href="../ninstructions/<%= @hensu1 + @patient.id %>"><img src="../images/bp_<%= @hensu1 + @patient.id %>c.png"></a><a href="../ninstructions/<%= @hensu2 + @patient.id %>"><img src="../images/bp_<%= @hensu2 + @patient.id %>c.png"></a><img src="../images/bp_3<%= @patient.id %>c.png"></div>
+<div class="kenon">
+<img src="../images/bp_4<%= @patient.id %>c.png" border="0">
+</div>
+<!-- 医師指示簿 -->
+<div id="a2" class="kenon"><a href="../dinstructions/<%= @patient.id %>"><img src="../images/bp_<%= @patient.id %>d.png"></a></div>
+<!-- 注射 -->
+<div id="a3" class="kenon"><img src="../images/bp_<%= @patient.id %>ee.png"><a href="../injections/<%= @patient.id %>"><img src="../images/bp_<%= @patient.id %>e.png"></a><a href="../injections/<%= @hensu1 + @patient.id %>"><img src="../images/bp_<%= @hensu1 + @patient.id %>e.png"></a><a href="../injections/<%= @hensu2 + @patient.id %>"><img src="../images/bp_<%= @hensu2 + @patient.id %>e.png"></a><img src="../images/bp_3<%= @patient.id %>e.png"></div>
+<!-- 処方  id="a4"-->
+<!-- 医師記録 -->
+<div id="a5" class="kenon"><img src="../images/bp_dk.png"><a href="../dreports/<%= @patient.id %>"><img src="../images/bp_dk1.png"></a><a href="../dreports/<%= @hensu1 + @patient.id %>"><img src="../images/bp_dk1.png"></a><img src="../images/bp_bk1.png"><img src="../images/bp_bk31.png"></div>
+<!-- 看護記録 -->
+<div id="a6" class="kenon"><img src="../images/bp_nk.png"><a href="../nreports/<%= @patient.id %>"><img src="../images/bp_nk1.png"></a><a href="../nreports/<%= @hensu1 + @patient.id %>"><img src="../images/bp_nk1.png"></a><a href="../nreports/<%= @hensu2 + @patient.id %>"><img src="../images/bp_nk1.png"></a><img src="../images/bp_bk31.png"></div>
+<!-- その他記録 -->
+<div id="a7" class="kenon"><img src="../images/bp_ek.png"><a href="../ereports/<%= @patient.id %>"><img src="../images/bp_ek1.png"></a><a href="../ereports/<%= @hensu1 + @patient.id %>"><img src="../images/bp_ek1.png"></a><img src="../images/bp_bk1.png"><img src="../images/bp_bk31.png"></div>
+<!-- テンプレート -->
+<div id="a8" class="kenon"><img src="../images/bp_1ff.png"><a href="../instructions/<%= @patient.id %>"><img src="../images/bp_t<%= @patient.id %>.png"></a><a href="../instructions/<%= @hensu1 + @patient.id %>"><img src="../images/bp_t<%= @hensu1 + @patient.id %>.png"></a><a href="../instructions/<%= @hensu2 + @patient.id %>"><img src="../images/bp_t<%= @hensu2 + @patient.id %>.png"></a><img src="../images/bp_t31.png"></div>
+<!-- 看護計画 -->
+<div id="a9" class="kenon"><img src="../images/bp_1gg.png"><a href="../plans/<%= @patient.id %>"><img src="../images/bp_<%= @patient.id %>g.png"></a><img src="../images/bp_31g.png"></div>
+<div class="kenon"><img src="../images/bp_1h.png"></div>
+<!-- 検査 -->
+<div id="a10" class="kenon"><img src="../images/bp_1ii.png"><a href="../results/<%= @patient.id %>"><img src="../images/bp_1i.png"></a><img src="../images/bp_31i.png"></div>
+<div class="kenon"><img src="../images/bp_1j.png"></div>
+</div>
+
+
+
+</div>

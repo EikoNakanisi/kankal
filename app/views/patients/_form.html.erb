@@ -1,0 +1,142 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <%= form_for(patient) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+
+  <div class="form-group">
+    <%= f.label :pname, '名前' %>
+    <%= f.text_field :pname, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :kana, 'カナ' %>
+    <%= f.text_field :kana, class: 'form-control' %>
+  </div>
+  
+  <div class="hospitalization_field">
+    <%= f.label :hospitalization, '入院日' %>
+    <%= f.date_select(:hospitalization,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :roomno, '部屋番号' %><br>
+    <%= f.text_field :roomno, class: 'form-control' %>
+  </div>
+
+  <div class="birth_date_field">
+    <%= f.label :birthday, '生年月日' %>
+    <%= f.date_select(:birthday,
+    start_year: 1910,
+    end_year:   (Time.now.year - 18),
+    default:    Date.new(1989, 1, 1)) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :age, '年齢' %>
+    <%= f.text_field :age, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender, '性別' %>
+    <%= f.select :gender, Patient.genders.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bloodtype, '血液型' %>
+    <%= f.select :bloodtype, Patient.bloodtypes.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :height, '身長' %>
+    <%= f.text_field :height, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :weight, '体重' %>
+    <%= f.text_field :weight, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address, '住所' %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :food, '食種' %>
+    <%= f.text_field :food, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :infection, '感染症' %>
+    <%= f.select :infection, Patient.infections.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aid, '救護区分' %>
+    <%= f.select :aid, Patient.aids.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attention, '注意事項' %>
+    <%= f.text_area :attention, class: 'form-control', rows: 3 %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :post, '掲示板' %>
+    <%= f.text_area :post, class: 'form-control', rows: 3 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :keyp1, 'キーパーソン関連1' %>
+    <%= f.text_field :keyp1, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :keyg1, 'キーパーソン1性別' %>
+    <%= f.text_field :keyg1, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :keyp2, 'キーパーソン関連2' %>
+    <%= f.text_field :keyp2, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :keyg2, 'キーパーソン2性別' %>
+    <%= f.text_field :keyg2, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :keyp3, 'キーパーソン関連3' %>
+    <%= f.text_field :keyp3, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :keyg3, 'キーパーソン3性別' %>
+    <%= f.text_field :keyg3, class: 'form-control' %>
+  </div>
+<div class="form-group">
+  <%= f.label :ptn01, '呼吸' %><%= f.text_area :ptn01, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn02, '飲食' %><%= f.text_area :ptn02, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn03, '排泄' %><%= f.text_area :ptn03, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn04, '活動' %><%= f.text_area :ptn04, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn05, '睡眠' %><%= f.text_area :ptn05, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn06, '衣類' %><%= f.text_area :ptn06, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn07, '体温' %><%= f.text_area :ptn07, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn08, '清潔' %><%= f.text_area :ptn08, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn09, '安全' %><%= f.text_area :ptn09, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn10, '宗教' %><%= f.text_area :ptn10, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn11, '職業' %><%= f.text_area :ptn11, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn12, '遊び' %><%= f.text_area :ptn12, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn13, '学習' %><%= f.text_area :ptn13, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn14, '総合' %><%= f.text_area :ptn14, class: 'form-control', rows: 3 %>
+
+
+
+</div>
+
+
+
+    <%= f.submit '入力', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>

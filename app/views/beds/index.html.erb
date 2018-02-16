@@ -1,0 +1,753 @@
+<div class="cover">
+<%= link_to '患者一覧', patients_path %>
+<% (1..2).each do |number| %>
+  <h6>&ensp;</h6>
+<% end %>
+<div class="space10">
+<a href="../patients/1"><img src="../images/keika_btn.png" border="0"></a>
+<a href="../schedules"><img src="../images/sch_btn.png" border="0"></a>
+</div>
+<% (1..12).each do |number| %>
+  <h6>&ensp;</h6>
+<% end %>
+
+
+<% @patients.each do |patient| %>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal<%= patient.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><%= patient.roomno %></h4>
+      </div>
+      <div class="modal-body"><h4>
+        ID:<%= patient.id %><br>
+        カナ氏名：<%= patient.kana %><br>
+        氏名：<%= patient.pname %><br>
+        年齢：<%= patient.age %>歳00ヶ月<br>
+        生年月日：<%= patient.birthday.strftime("%Y-%m-%d") %><br>
+        性別：<%= patient.gender %><br>
+        診療科：緩和ケア内科<br>
+        入院日：2018/01/15<br>
+        在院日数：3日<br>
+        主担当医：医者　太郎<br>
+        担当医1：<br>
+        担当医2：<br>
+        担当看護師：看護　花子<br>
+        副担当看護師：看護　良子
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <% if patient.roomno == '２' %>
+        <% if patient.pname== '空室' %>
+          <div class="box"><font size="2">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;２号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">2</font></div>
+          </div>
+        <% else %>
+      <div class="box"><font size="2">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;２号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;２号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">2</font></div>
+      </div>
+      <% end %><% end %>
+  
+      <% if patient.roomno == '３' %>
+        <% if patient.pname== '空室' %>
+          <div class="box">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;３号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">3</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;３号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;３号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">3</font></div>
+      </div>
+      <% end %><% end %>
+
+      <% if patient.roomno == '６' %>
+        <% if patient.pname== '空室' %>
+          <div class="box">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;６号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">6</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;６号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;６号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+      <div class="box3"><font size="2">6</font></div>
+      </div>
+      <% end %><% end %>
+
+      <% if patient.roomno == '７' %>
+        <% if patient.pname== '空室' %>
+          <div class="box">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;７号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">7</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;７号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;７号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">7</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '１０' %>
+  <div class="boxs">食堂</div>
+        <% if patient.pname== '空室' %>
+          <div class="box">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１０号室&emsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">10</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１０号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１０号室&emsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">10</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '１１' %>
+        <% if patient.pname== '空室' %>
+          <div class="box">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１１号室&emsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">11</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１１号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１１号室&emsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">11</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '１３－１' %>
+        <% if patient.pname== '空室' %>
+          <div class="box">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１３号室&emsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">13-1</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１３号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１３号室&emsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">13-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '１４－１' %>
+        <% if patient.pname== '空室' %>
+          <div class="box">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１４号室&emsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">14-1</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１４号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１４号室&emsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">14-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+<% end %>
+
+
+<% @patients.each do |patient| %>
+      <% if patient.roomno == '１－１' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;１号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">1-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;１号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;１号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">1-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '４－１' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;４号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">4-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;４号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;４号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">4-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '５－１' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;５号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">5-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;５号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;５号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">5-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '８' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;８号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">8-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;８号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;８号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">8-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '９' %>
+  <div class="boxs2"></div>
+        <% if patient.pname== '空室' %>
+          <div class="boxl">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;９号室&emsp;&nbsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">9</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;９号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&nbsp;&emsp;９号室&emsp;&nbsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">9</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '１２' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl">
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１２号室&emsp;</button></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">12</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+<div class="space9">
+<!-- Button trigger modal -->
+<% if patient.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１２号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= patient.id %>">&emsp;１２号室&emsp;</button>
+<% end %>
+</div>
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">12</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '１３－２' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl1">
+          
+          <div class="box2"></div>
+          <div class="box3"><font size="2">13-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl1">
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">13-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '１４－２' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl1">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">14-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl1">
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">14-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+<% end %>
+
+
+<% @patients.each do |patient| %>
+      <% if patient.roomno == '１－２' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">1-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl2">
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">1-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '４－２' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">4-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl2">
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">4-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '５－２' %>
+        <% if patient.pname== '空室' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">5-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl2">
+    <% if patient.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to patient.pname, bed_path(patient.id) %>
+      <% if patient.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif patient.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">5-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if patient.roomno == '８' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">8-2</font></div>
+          </div>
+      <% end %>
+
+      <% if patient.roomno == '９' %>
+        <div class="boxs3"></div>
+          <div class="boxl2">
+          </div>
+      <% end %>
+
+      <% if patient.roomno == '１２' %>
+          <div class="boxl2">
+          </div>
+      <% end %>
+
+      <% if patient.roomno == '１３－１' %>
+          <div class="boxl2">
+          </div>
+      <% end %>
+
+      <% if patient.roomno == '１４－１' %>
+          <div class="boxl2">
+          </div>
+      <% end %>
+
+<% end %>
+</div>
+
+
+
+<div class="aside">
+
+<div class="space10">
+<a href="/" class="btn btn-warning active" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+</div>
+<div class="space5"></div>
+<div class="space6">
+<a href="/patients/1"><font size="2"><%= @name1 %></font></a><br>
+<a href="/patients/3"><font size="2"><%= @name3 %></font></a><br>
+<a href="/patients/4"><font size="2"><%= @name4 %></font></a><br>
+<a href="/patients/5"><font size="2"><%= @name5 %></font></a><br>
+<a href="/patients/7"><font size="2"><%= @name7 %></font></a><br>
+<br>
+<br>
+<br>
+<br>
+<font size="3">経過表</font><br>
+<font size="3">看護指示</font><br>
+<font size="3">指示簿一覧</font><br>
+<font size="3">看護計画</font><br>
+<font size="3">患者スケジュール</font><br>
+<font size="3">看護プロファイル</font><br>
+<font size="3">移動食事カレンダ</font><br>
+</div>
+
+</div>
+
+
+

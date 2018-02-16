@@ -1,15 +1,429 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@charset "utf-8";
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cover {
+  margin: 0px;
+  float: left;
+  width: 1100px;
+  height: 980px;
+  background-image:url("/images/bedmap01.png");
+  background-size:100% auto;
+  background-repeat: no-repeat;
+  
+}
+.cover01 {
+  position: fixed;
+  top: 80px;
+  float: left;
+  margin: 0px;
+  width: 1200px;
+  height: 122px;
+  background-image:url("/images/kenon_head.png");
+  background-size:100% auto;
+}
+
+.aside {
+  float: right;
+  width: 145px;
+  height: 914px;
+  background-image:url("/images/sidebar01.png");
+  background-repeat: no-repeat;
+  background-size:100% auto;
+}
+
+.sidebar {
+  width: 145px;
+    height: 914px;
+    background-image:url("/images/sidebar01.png");
+    background-size:100% auto;
+    float: right;
+  position: fixed;
+}
+
+.keiji {
+  margin: 0px;
+  float: left;
+  width: 1100px;
+  height: 980px;
+  background-image:url("/images/keiji.png");
+  background-size:100% auto;
+}
+
+div.ao {color: #FFFFFF; background-color:royalblue;}
+
+.headbox01{
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 0px;
+  width: 8%;
+  height: 80px;
+  }
+
+.page-header {
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  float: left;
+  height: 80px;
+  width: 1200px;
+  background-image:url("/images/head_01.jpg");
+  background-size:100% auto;
+}
+
+.headbox01Container{
+  overflow: hidden;
+}
+
+.headbox02{
+  float: left;
+  margin-top: 20px;
+  padding: 0px;
+  width: 13%;
+  height: 80px;
+}
+
+.headbox02Container{
+  overflow: hidden;
+}
+.headbox03{
+  float: left;
+  margin-top: 10px;
+  padding: 0px;
+  width: 30%;
+  height: 80px;
+}
+
+.headbox03Container{
+  overflow: hidden;
+}
+
+.headbox04{
+  float: left;
+  margin-top: 30px;
+  padding: 0px;
+  width: 30%;
+  height: 80px;
+}
+
+.headbox04Container{
+  overflow: hidden;
+}
+
+.headbox05{
+  float: left;
+  margin-top: 15px;
+  padding: 0px;
+  width: 4%;
+  height: 80px;
+}
+
+.headbox05Container{
+  overflow: hidden;
+}
+
+.kenon01 {
+  margin-top: 200px;
+}
+
+.kenon {
+  line-height: 0;
+}
+
+.box{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 100px;
+  background: cornsilk;
+  border-top: solid 1px #000000;
+  border-left: solid 1px #000000;
+}
+
+.boxContainer{
+  overflow: hidden;
+}
+
+.box2{
+    padding: 2px;
+    margin: 3px 10px;
+    width: 90px;
+    height: 27px;
+    color: #2c2c2f;
+    background: whitesmoke;
+    border-top: solid 1px lightslategray;
+    border-left: solid 1px lightslategray;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+  
+}
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}
+.box3{
+    padding: 0px;
+    margin: 3px 30px;
+    height: 18px;
+    width: 50px;
+    color: black;
+    text-align: center;
+    background: white;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+  
+}
+.box3 p {
+    margin: 0; 
+    padding: 0;
+}
+.box4{
+    padding: 2px;
+    margin: 3px 10px;
+    width: 90px;
+    height: 27px;
+    color: black;
+    background: #CCFF99;
+    border-top: solid 1px lightslategray;
+    border-left: solid 1px lightslategray;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+  
+}
+.box4 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.boxs{
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 100px;
+  background: bisque;
+  border-left: solid 1px #000000;
+
+}
+
+.boxsContainer{
+  overflow: hidden;
+}
+
+.boxl{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 87px;
+  background: cornsilk;
+  border-top: solid 1px #000000;
+  border-left: solid 1px #000000;
+}
+
+.boxlContainer{
+  overflow: hidden;
+}
+
+.boxl1{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 87px;
+  background: cornsilk;
+  border-left: solid 1px #000000;
+}
+
+.boxl1Container{
+  overflow: hidden;
+}
+
+.boxl2{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 65px;
+  background: cornsilk;
+  border-left: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+
+}
+
+.boxl2Container{
+  overflow: hidden;
+}
+
+.boxs{
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 100px;
+  background: bisque;
+  border-left: solid 1px #000000;
+
+}
+
+.boxsContainer{
+  overflow: hidden;
+}
+
+.boxs2{
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 87px;
+  background: bisque;
+  border-left: solid 1px #000000;
+
+}
+
+.boxs2Container{
+  overflow: hidden;
+}
+
+.boxs3{
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 65px;
+  background: bisque;
+  border-left: solid 1px #000000;
+
+}
+
+.boxs3Container{
+  overflow: hidden;
+}
+
+.id {
+  margin: 5px;
+  padding: 1px;
+  float: left;
+  width: 170px;
+  height: 20px;
+  text-align: right;
+}
+.name {
+  margin: 5px;
+  padding: 1px;
+  float: left;
+  width: 250px;
+  height: 20px;
+  text-align: center;
+}
+.gender {
+  margin: 5px;
+  padding: 1px;
+  float: left;
+  width: 80px;
+  height: 20px;
+  text-align: right;
+}
+.birth {
+  margin: 5px;
+  padding: 1px;
+  float: left;
+  width: 190px;
+  height: 20px;
+  text-align: right;
+}
+.age {
+  margin: 5px;
+  padding: 1px;
+  float: left;
+  width: 100px;
+  height: 20px;
+  text-align: right;
+}
+
+
+
+.space1 {
+  margin: 5px;
+  float: left;
+  width: 983px;
+  height: 80px;
+}
+
+.space2 {
+  margin: 0px;
+  float: left;
+  width: 98px;
+  height: 85px;
+}
+
+.space3 {
+  margin: 5px;
+  float: left;
+  width: 1300px;
+  height:255px;
+}
+
+.space4 {
+  margin: 5px;
+  float: left;
+  width: 20px;
+  height:555px;
+}
+
+.space5 {
+  margin-top: 120px;
+  margin-left: 10px;
+}
+
+.space6 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.space7 {
+  margin-top: 205px;
+  margin-left: 10px;
+}
+
+.space8 {
+  margin-top: 80px;
+}
+
+.space9 {
+  margin-left: 10px;
+}
+
+.space10 {
+  float: right;
+  margin-right: 10px;
+}
+
+.space11 {
+  margin-left: 30px;
+  margin-top:100px;
+}
+
+.space12 {
+  margin-left: 90px;
+  margin-top: 15px;
+}
+
+.space13 {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.space14 {
+  margin-top: 75px;
+  margin-left: 20px;
+}
+
+.space15 {
+  margin-top: 53px;
+  margin-left: 20px;
+}
+
+
+
+
