@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: kankal_production
   username: kankal
   password: <%= ENV['KANKAL_DATABASE_PASSWORD'] %>
