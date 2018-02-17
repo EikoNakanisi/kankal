@@ -30,7 +30,7 @@
 .aside {
   float: right;
   width: 145px;
-  height: 914px;
+  height: 5000px;
   background-image:url("/images/sidebar01.png");
   background-repeat: no-repeat;
   background-size:100% auto;
@@ -424,6 +424,74 @@ div.ao {color: #FFFFFF; background-color:royalblue;}
   margin-left: 20px;
 }
 
+/* 外枠部分 */
+div.y_data_area3 {
+  width: 1100px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+ 
+/* タイトル部分 */
+table.y_data_title3 {
+  width: 1100px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+ 
+table.y_data_title3 th {
+  border-top: 1px solid #CCC;
+  background: #E6E6FA;
+}
+ 
+table.y_data_title3 th,
+table.y_data_title3 td {
+  padding: 0px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+table.y_data_title3 th.r_none,
+table.y_data_title3 td.r_none {
+  border-right: none;
+}
+ 
+/* データ部分 */
+div.y_scroll_box3 {
+  width: 1100px;
+  max-height: 650px;
+  height: 650px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+ 
+div.y_hidden3 {
+  overflow: hidden;
+  padding: 0 0 10px;
+}
+ 
+table.y_data3 {
+  width: 1100px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+ 
+table.y_data3 th,
+table.y_data3 td {
+  padding: 0px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+
+table.y_data3 td p {
+  margin: 0;
+}
+ 
+
+ 
 
 
 
