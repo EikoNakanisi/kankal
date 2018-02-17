@@ -1,0 +1,83 @@
+class CreateNinstructions < ActiveRecord::Migration[5.0]
+  def change
+    create_table :ninstructions do |t|
+      t.integer :no01
+      t.integer :no02
+      t.integer :no03
+      t.integer :no04
+      t.integer :no05
+      t.integer :no06
+      t.integer :no07
+      t.integer :no08
+      t.integer :no09
+      t.integer :no10
+      t.integer :no11
+      t.integer :no12
+      t.integer :no13
+      t.integer :no14
+      t.integer :no15
+      t.datetime :nty01
+      t.datetime :nty02
+      t.datetime :nty03
+      t.datetime :nty04
+      t.datetime :nty05
+      t.datetime :nty06
+      t.datetime :nty07
+      t.datetime :nty08
+      t.datetime :nty09
+      t.datetime :nty10
+      t.datetime :nty11
+      t.datetime :nty12
+      t.datetime :nty13
+      t.datetime :nty14
+      t.datetime :nty15
+      t.datetime :ntj01
+      t.datetime :ntj02
+      t.datetime :ntj03
+      t.datetime :ntj04
+      t.datetime :ntj05
+      t.datetime :ntj06
+      t.datetime :ntj07
+      t.datetime :ntj08
+      t.datetime :ntj09
+      t.datetime :ntj10
+      t.datetime :ntj11
+      t.datetime :ntj12
+      t.datetime :ntj13
+      t.datetime :ntj14
+      t.datetime :ntj15
+      t.string :nd01
+      t.string :nd02
+      t.string :nd03
+      t.string :nd04
+      t.string :nd05
+      t.string :nd06
+      t.string :nd07
+      t.string :nd08
+      t.string :nd09
+      t.string :nd10
+      t.string :nd11
+      t.string :nd12
+      t.string :nd13
+      t.string :nd14
+      t.string :nd15
+      t.string :ni01
+      t.string :ni02
+      t.string :ni03
+      t.string :ni04
+      t.string :ni05
+      t.string :ni06
+      t.string :ni07
+      t.string :ni08
+      t.string :ni09
+      t.string :ni10
+      t.string :ni11
+      t.string :ni12
+      t.string :ni13
+      t.string :ni14
+      t.string :ni15
+
+      t.timestamps
+    end
+  end
+end

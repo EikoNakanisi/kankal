@@ -1,0 +1,26 @@
+<h1>Listing 医師指示</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>指示１</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dinstructions.each do |dinstruction| %>
+  <tr>
+    <td><%= dinstruction.id %></td>
+    <td><%= dinstruction.di01 %></td>
+    <td><%= link_to 'Show', dinstruction %></td>
+    <td><%= link_to 'Edit', edit_dinstruction_path(dinstruction) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<%= link_to 'New dinstruction', new_dinstruction_path %>|
+<%= link_to 'Patientshome', patients_path %>

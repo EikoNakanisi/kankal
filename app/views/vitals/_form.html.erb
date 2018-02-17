@@ -1,0 +1,135 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= form_for(vital) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+
+  <div class="form-group">
+    <%= f.label :p01, '心拍数15日10時' %>
+    <%= f.text_field :p01, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :p02, '15日19時' %>
+    <%= f.text_field :p02, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :p03, '16日06時' %>
+    <%= f.text_field :p03, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :p04, '心拍数16日10時' %>
+    <%= f.text_field :p04, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :p05, '16日19時' %>
+    <%= f.text_field :p05, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :p06, '17日06時' %>
+    <%= f.text_field :p06, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :bpu01, '非観血(収縮期)15日10時' %>
+    <%= f.text_field :bpu01, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpu02, '15日19時' %>
+    <%= f.text_field :bpu02, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpu03, '16日06時' %>
+    <%= f.text_field :bpu03, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpu04, '非観血(収縮期)16日10時' %>
+    <%= f.text_field :bpu04, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpu05, '16日19時' %>
+    <%= f.text_field :bpu05, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpu06, '17日06時' %>
+    <%= f.text_field :bpu06, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpd01, '非観血(拡張期)15日10時' %>
+    <%= f.text_field :bpd01, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpd02, '15日19時' %>
+    <%= f.text_field :bpd02, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpd03, '16日06時' %>
+    <%= f.text_field :bpd03, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpd04, '非観血(拡張期)16日10時' %>
+    <%= f.text_field :bpd04, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpd05, '16日19時' %>
+    <%= f.text_field :bpd05, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bpd06, '17日06時' %>
+    <%= f.text_field :bpd06, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :kt01, '体温(表皮)15日10時' %>
+    <%= f.text_field :kt01, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :kt02, '15日19時' %>
+    <%= f.text_field :kt02, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :kt03, '16日06時' %>
+    <%= f.text_field :kt03, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :kt04, '体温(表皮)16日10時' %>
+    <%= f.text_field :kt04, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :kt05, '16日19時' %>
+    <%= f.text_field :kt05, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :kt06, '17日06時' %>
+    <%= f.text_field :kt06, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :r01, '呼吸数15日10時' %>
+    <%= f.text_field :r01, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :r02, '15日19時' %>
+    <%= f.text_field :r02, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :r03, '16日06時' %>
+    <%= f.text_field :r03, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :r04, '呼吸数16日10時' %>
+    <%= f.text_field :r04, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :r05, '16日19時' %>
+    <%= f.text_field :r05, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :r06, '17日06時' %>
+    <%= f.text_field :r06, class: 'form-control' %>
+  </div>
+
+
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>
+
+</div></div>

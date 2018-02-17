@@ -1,0 +1,79 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">グラフデータ参照画面</font><br>
+        </p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+</ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+<br><br><br><br>
+
+
+<table border="1" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<tr>
+<th bgcolor="#CCCCFF" ><font size="+1" color="#000000">測定時刻</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/15 10:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/15 19:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/16 6:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/16 10:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/16 19:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/17 6:00</font></th>
+
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">心拍数</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.p01 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.p02 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.p03 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.p04 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.p05 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.p06 %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">非観血(収縮期)</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpu01 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpu02 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpu03 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpu04 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpu05 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpu06 %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">非観血(拡張期)</td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpd01 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpd02 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpd03 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpd04 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpd05 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.bpd06 %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">体温(表皮)</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.kt01 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.kt02 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.kt03 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.kt04 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.kt05 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.kt06 %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">呼吸数</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.r01 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.r02 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.r03 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.r04 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.r05 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @vital.r06 %></font></td>
+</tr>
+</table>
+
+<%= link_to 'edit', edit_vital_path(@vital) %>|
+<%= link_to 'Index', vitals_path %>

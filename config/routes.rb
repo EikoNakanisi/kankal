@@ -14,7 +14,16 @@ Rails.application.routes.draw do
   resources :beds, only: [:index, :show] do
     resources :foods, only: [:show]
   end
-
+  resources :vitals
+  resources :dinstructions
+  resources :ninstructions
+  
+  resources :injections
+  resources :prescriptions
+  resources :dreports
+  resources :nreports
+  resources :ereports
+  resources :instructions
 
 
 end

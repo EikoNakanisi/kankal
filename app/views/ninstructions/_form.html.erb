@@ -1,0 +1,450 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= form_for(ninstruction) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no01, :無０１, checked: "checked" %><%= f.label :無, class: "no01_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no01, :有０１ %><%= f.label :有, class: "no01_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no01, :未実施０１ %><%= f.label :未実施, class: "no01_label" %>
+  </div>
+</div>
+  <div class="nty01_field">
+    <%= f.label :nty01, '予定年月日' %>
+    <%= f.datetime_select(:nty01,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj01_field">
+    <%= f.label :ntj01, '実施年月日' %>
+    <%= f.datetime_select(:ntj01,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd01, '看護指示名１' %><%= f.text_area :nd01, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni01, '看護指示内容１' %><%= f.text_area :ni01, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no02, :無０２, checked: "checked" %><%= f.label :無, class: "no02_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no02, :有０２ %><%= f.label :有, class: "no02_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no02, :未実施０２ %><%= f.label :未実施, class: "no02_label" %>
+  </div>
+</div>
+  <div class="nty02_field">
+    <%= f.label :nty02, '予定年月日' %>
+    <%= f.datetime_select(:nty02,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj02_field">
+    <%= f.label :ntj02, '実施年月日' %>
+    <%= f.datetime_select(:ntj02,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd02, '看護指示名２' %><%= f.text_area :nd02, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni02, '看護指示内容２' %><%= f.text_area :ni02, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no03, :無０３, checked: "checked" %><%= f.label :無, class: "no03_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no03, :有０３ %><%= f.label :有, class: "no03_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no03, :未実施０３ %><%= f.label :未実施, class: "no03_label" %>
+  </div>
+</div>
+  <div class="nty03_field">
+    <%= f.label :nty03, '予定年月日' %>
+    <%= f.datetime_select(:nty03,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj03_field">
+    <%= f.label :ntj03, '実施年月日' %>
+    <%= f.datetime_select(:ntj03,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd03, '看護指示名３' %><%= f.text_area :nd03, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni03, '看護指示内容３' %><%= f.text_area :ni03, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no04, :無０４, checked: "checked" %><%= f.label :無, class: "no04_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no04, :有０４ %><%= f.label :有, class: "no04_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no04, :未実施０４ %><%= f.label :未実施, class: "no04_label" %>
+  </div>
+</div>
+  <div class="nty04_field">
+    <%= f.label :nty04, '予定年月日' %>
+    <%= f.datetime_select(:nty04,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj04_field">
+    <%= f.label :ntj04, '実施年月日' %>
+    <%= f.datetime_select(:ntj04,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd04, '看護指示名４' %><%= f.text_area :nd04, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni04, '看護指示内容４' %><%= f.text_area :ni04, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no05, :無０５, checked: "checked" %><%= f.label :無, class: "no05_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no05, :有０５ %><%= f.label :有, class: "no05_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no05, :未実施０５ %><%= f.label :未実施, class: "no05_label" %>
+  </div>
+</div>
+  <div class="nty05_field">
+    <%= f.label :nty05, '予定年月日' %>
+    <%= f.datetime_select(:nty05,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj05_field">
+    <%= f.label :ntj05, '実施年月日' %>
+    <%= f.datetime_select(:ntj05,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd05, '看護指示名５' %><%= f.text_area :nd05, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni05, '看護指示内容５' %><%= f.text_area :ni05, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no06, :無０６, checked: "checked" %><%= f.label :無, class: "no06_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no06, :有０６ %><%= f.label :有, class: "no06_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no06, :未実施０６ %><%= f.label :未実施, class: "no06_label" %>
+  </div>
+</div>
+  <div class="nty06_field">
+    <%= f.label :nty06, '予定年月日' %>
+    <%= f.datetime_select(:nty06,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj06_field">
+    <%= f.label :ntj06, '実施年月日' %>
+    <%= f.datetime_select(:ntj06,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd06, '看護指示名６' %><%= f.text_area :nd06, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni06, '看護指示内容６' %><%= f.text_area :ni06, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no07, :無０７, checked: "checked" %><%= f.label :無, class: "no07_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no07, :有０７ %><%= f.label :有, class: "no07_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no07, :未実施０７ %><%= f.label :未実施, class: "no07_label" %>
+  </div>
+</div>
+  <div class="nty07_field">
+    <%= f.label :nty07, '予定年月日' %>
+    <%= f.datetime_select(:nty07,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj07_field">
+    <%= f.label :ntj07, '実施年月日' %>
+    <%= f.datetime_select(:ntj07,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd07, '看護指示名７' %><%= f.text_area :nd07, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni07, '看護指示内容７' %><%= f.text_area :ni07, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no08, :無０８, checked: "checked" %><%= f.label :無, class: "no08_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no08, :有０８ %><%= f.label :有, class: "no08_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no08, :未実施０８ %><%= f.label :未実施, class: "no08_label" %>
+  </div>
+</div>
+  <div class="nty08_field">
+    <%= f.label :nty08, '予定年月日' %>
+    <%= f.datetime_select(:nty08,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj08_field">
+    <%= f.label :ntj08, '実施年月日' %>
+    <%= f.datetime_select(:ntj08,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd08, '看護指示名８' %><%= f.text_area :nd08, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni08, '看護指示内容８' %><%= f.text_area :ni08, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no09, :無０９, checked: "checked" %><%= f.label :無, class: "no09_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no09, :有０９ %><%= f.label :有, class: "no09_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no09, :未実施０９ %><%= f.label :未実施, class: "no09_label" %>
+  </div>
+</div>
+  <div class="nty09_field">
+    <%= f.label :nty09, '予定年月日' %>
+    <%= f.datetime_select(:nty09,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj09_field">
+    <%= f.label :ntj09, '実施年月日' %>
+    <%= f.datetime_select(:ntj09,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd09, '看護指示名９' %><%= f.text_area :nd09, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni09, '看護指示内容９' %><%= f.text_area :ni09, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no10, :無１０, checked: "checked" %><%= f.label :無, class: "no10_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no10, :有１０ %><%= f.label :有, class: "no10_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no10, :未実施１０ %><%= f.label :未実施, class: "no10_label" %>
+  </div>
+</div>
+  <div class="nty10_field">
+    <%= f.label :nty10, '予定年月日' %>
+    <%= f.datetime_select(:nty10,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj10_field">
+    <%= f.label :ntj10, '実施年月日' %>
+    <%= f.datetime_select(:ntj10,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd10, '看護指示名１０' %><%= f.text_area :nd10, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni10, '看護指示内容１０' %><%= f.text_area :ni10, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no11, :無１１, checked: "checked" %><%= f.label :無, class: "no11_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no11, :有１１ %><%= f.label :有, class: "no11_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no11, :未実施１１ %><%= f.label :未実施, class: "no11_label" %>
+  </div>
+</div>
+  <div class="nty11_field">
+    <%= f.label :nty11, '予定年月日' %>
+    <%= f.datetime_select(:nty11,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj11_field">
+    <%= f.label :ntj11, '実施年月日' %>
+    <%= f.datetime_select(:ntj11,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd11, '看護指示名１１' %><%= f.text_area :nd11, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni11, '看護指示内容１１' %><%= f.text_area :ni11, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no12, :無１２, checked: "checked" %><%= f.label :無, class: "no12_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no12, :有１２ %><%= f.label :有, class: "no12_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no12, :未実施１２ %><%= f.label :未実施, class: "no12_label" %>
+  </div>
+</div>
+  <div class="nty12_field">
+    <%= f.label :nty12, '予定年月日' %>
+    <%= f.datetime_select(:nty12,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj12_field">
+    <%= f.label :ntj12, '実施年月日' %>
+    <%= f.datetime_select(:ntj12,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd12, '看護指示名１２' %><%= f.text_area :nd12, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni12, '看護指示内容１２' %><%= f.text_area :ni12, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no13, :無１３, checked: "checked" %><%= f.label :無, class: "no13_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no13, :有１３ %><%= f.label :有, class: "no13_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no13, :未実施１３ %><%= f.label :未実施, class: "no13_label" %>
+  </div>
+</div>
+  <div class="nty13_field">
+    <%= f.label :nty13, '予定年月日' %>
+    <%= f.datetime_select(:nty13,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj13_field">
+    <%= f.label :ntj13, '実施年月日' %>
+    <%= f.datetime_select(:ntj13,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd13, '看護指示名１３' %><%= f.text_area :nd13, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni13, '看護指示内容１３' %><%= f.text_area :ni13, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no14, :無１４, checked: "checked" %><%= f.label :無, class: "no14_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no14, :有１４ %><%= f.label :有, class: "no14_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no14, :未実施１４ %><%= f.label :未実施, class: "no14_label" %>
+  </div>
+</div>
+  <div class="nty14_field">
+    <%= f.label :nty14, '予定年月日' %>
+    <%= f.datetime_select(:nty14,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj14_field">
+    <%= f.label :ntj14, '実施年月日' %>
+    <%= f.datetime_select(:ntj14,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd14, '看護指示名１４' %><%= f.text_area :nd14, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni14, '看護指示内容１４' %><%= f.text_area :ni14, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :no15, :無１５, checked: "checked" %><%= f.label :無, class: "no15_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no15, :有１５ %><%= f.label :有, class: "no15_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :no15, :未実施１５ %><%= f.label :未実施, class: "no15_label" %>
+  </div>
+</div>
+  <div class="nty15_field">
+    <%= f.label :nty15, '予定年月日' %>
+    <%= f.datetime_select(:nty15,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+  <div class="ntj15_field">
+    <%= f.label :ntj15, '実施年月日' %>
+    <%= f.datetime_select(:ntj15,
+    start_year: 2018,  end_year: (Time.now.year - 22),default: Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :nd15, '看護指示名１５' %><%= f.text_area :nd15, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :ni15, '看護指示内容１５' %><%= f.text_area :ni15, class: 'form-control', rows: 3 %>
+</div>
+
+
+
+
+
+
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>
+
+</div></div>
