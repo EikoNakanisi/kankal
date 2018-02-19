@@ -1,0 +1,397 @@
+<!-- 看護プロファイル -->
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+<table border="1" width="1100" cellspacing="0" cellpadding="5" bordercolor="#CCCCFF">
+<tr>
+<th bgcolor="#CCCCFF"><u>&nbsp;入院 病棟<br>&nbsp;緩和ケア</u></th>
+<th bgcolor="#CCCCFF">ID: <%= @patient.id %><br><u>国保30本人(30%)</u></th>
+<th bgcolor="#CCCCFF">
+        <% if @patient.gender == '男' %>
+          <%= image_tag 'men.png', :title => '男性', :size => '100x50', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+
+<th bgcolor="#CCCCFF"><font size="6"><u>
+              <ruby>
+            <rb><%= @patient.pname %></rb>
+            <rp>（</rp><rt><%= @patient.kana %></rt><rp>）</rp>
+            </ruby>
+            </u></font></th>
+            
+<th bgcolor="#CCCCFF">
+        <% if @patient.infection == '有' %>
+          <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'alrt_n.png', :title => '感染症未確認', :size => '40x40', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF">
+        <% if @patient.id == '3' %>
+          <%= image_tag 'arg_y.png', :title => '青魚禁', :size => '40x40', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF"><%= @patient.age %>歳00ヶ月&ensp;&ensp;&ensp;<%= @patient.bloodtype %>型Rh(*)&ensp;&ensp;&ensp;<u><%= @patient.height %>cm&ensp;<%= @patient.weight %>Kg</u></th>
+<th bgcolor="#CCCCFF">
+  <a href="/profiles/<%= @patient.id %>" class="btn btn-default btn-sm active" role="button">Prof</a><br>
+  <a href="#" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
+</th>
+<th bgcolor="#CCCCFF">
+<button type="button" class="btn btn-default btn-sm active" disabled="disabled">歴一覧</button>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a></tr>
+</th>
+</table>
+
+<div class="ao">&ensp;看護プロファイルメニュー</div>
+
+
+<div role="tabpanel">
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination" role="tablist">
+    <li role="presentation" class="page-item active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">プロフィール</a></li>
+    <li role="presentation" class="page-item"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">パターン要約</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ﾍﾙｽﾌﾟﾛﾓ&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ﾍﾙｽﾌﾟﾛﾓ&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ﾍﾙｽﾌﾟﾛﾓ&#9314;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">栄養&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">栄養&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">排泄</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">活動/休息&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">活動/休息&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">知覚/認知</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">自己知覚</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">役割関係&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">役割関係&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ｾｸｼｭｱﾘﾃｨ</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ｺｰﾋﾟﾝｸﾞ</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">生活原理</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">安全/防御</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">安楽</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">成長/発達</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Tab panes -->
+<div class="tab-content">
+  <!-- プロフィール -->
+<div role="tabpanel" class="tab-pane active" id="home"><div class="cover03">
+<div class="space6">
+<div class="row">
+
+<div class="space11">
+<table border="3" bordercolor="#C0C0C0" width="1000" cellspacing="5">
+<tr>
+<th bgcolor="#C0C0C0"><font color="#0000CD">ID</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">氏名</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">カナ氏名</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">性別</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">生年月日</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">血液</font></th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="150"><%= @patient.id %></td>
+<td bgcolor="#FFFFFF" width="150"><%= @patient.pname %></td>
+<td bgcolor="#FFFFFF" width="150"><%= @patient.kana %></td>
+<td bgcolor="#FFFFFF" width="50"><%= @patient.gender %></td>
+<td bgcolor="#FFFFFF" width="150"><%= @patient.birthday .strftime("%Y年%m月%d日") %></td>
+<td bgcolor="#FFFFFF" width="150">ABO型<%= @patient.bloodtype %>型　RH型+</td>
+</tr>
+</table>
+
+<table border="3" bordercolor="#C0C0C0" width="1000" cellspacing="5">
+<tr>
+<th bgcolor="#C0C0C0"><font color="#0000CD">入院日</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">入院時間</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">入院時年齢</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">国籍</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">現住所</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">自宅電話番号</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">緊急（医事課登録）</font></th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="110"><%= @patient.hospitalization .strftime("%Y年%m月%d日") %></td>
+<td bgcolor="#FFFFFF" width="100">10時00分</td>
+<td bgcolor="#FFFFFF" width="100"><%= @patient.age %></td>
+<td bgcolor="#FFFFFF" width="90">日本</td>
+<td bgcolor="#FFFFFF" width="300"><%= @patient.address %></td>
+<td bgcolor="#FFFFFF" width="150">000-000-0000</td>
+<td bgcolor="#FFFFFF" width="150">000-000-0000</td>
+</tr>
+</table>
+
+<table border="4" bordercolor="#C0C0C0" width="630" cellspacing="5">
+<tr><th bgcolor="#C0C0C0" colspan="6"><font color="#0000CD">緊急連絡先</font></th></tr>
+<tr>
+<td bgcolor="#C0C0C0" align="right">&#9312;&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;000-000-0000</td>
+<td bgcolor="#C0C0C0" align="right">&#9313;&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;000-000-0000</td>
+<td bgcolor="#C0C0C0" align="right">&#9314;&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;000-000-0000</td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">氏名&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;鍵内一子</td>
+<td bgcolor="#C0C0C0" align="right">氏名&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;鍵内二子</td>
+<td bgcolor="#C0C0C0" align="right">氏名&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;鍵内一夫</td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">本人との関係&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;<%= @patient.keyp1 %></td>
+<td bgcolor="#C0C0C0" align="right">本人との関係&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;<%= @patient.keyp2 %></td>
+<td bgcolor="#C0C0C0" align="right">本人との関係&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;<%= @patient.keyp3 %></td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">連絡先場所&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;携帯電話</td>
+<td bgcolor="#C0C0C0" align="right">連絡先場所&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;携帯電話</td>
+<td bgcolor="#C0C0C0" align="right">連絡先場所&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;携帯電話</td>
+</tr>
+
+</table>
+
+
+</div>
+
+
+</div></div></div></div>
+
+
+
+
+  <!-- パターン要約 -->
+    <div role="tabpanel" class="tab-pane" id="profile">
+<div class="row">
+<div class="ao">&ensp;パターン要約</div>
+
+<div class="col-md-4">
+  
+<div class="panel panel-default">
+  <div class="panel-heading">領域1＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn01 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域2＜飲食＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn02 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域3＜排泄＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn03 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域4＜姿勢・活動＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn04 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域5＜睡眠・休息＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn05 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域6＜衣類＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn06 %></small>
+
+  </div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域7＜体温・循環＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn07 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域8＜清潔・皮膚保護＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn08 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域9＜安全・コミュニケーション＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn09 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域10＜宗教＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn10 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域11＜職業＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn11 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域12＜レクリエーション＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn12 %></small>
+
+  </div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域13＜学習＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn13 %></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-7">
+<div class="panel panel-default">
+  <div class="panel-heading">総合評価&emsp;&emsp;記載日2018/01/15
+  </div>
+  <div class="panel-body"><small><%= @patient.ptn14 %></small>
+  </div>
+</div>
+</div>
+  </div>
+<a href="../patients/<%= @patient.id %>/edit">edit</a>
+
+</div>
+
+
+</div></div></div>
+
+
