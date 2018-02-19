@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180219101853) do
+ActiveRecord::Schema.define(version: 20180219140734) do
 
   create_table "dinstructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "di01"
@@ -39,6 +39,56 @@ ActiveRecord::Schema.define(version: 20180219101853) do
     t.string   "di24"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dreports", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "drs01",      limit: 65535
+    t.text     "dro01",      limit: 65535
+    t.text     "dra01",      limit: 65535
+    t.text     "drp01",      limit: 65535
+    t.text     "drs02",      limit: 65535
+    t.text     "dro02",      limit: 65535
+    t.text     "dra02",      limit: 65535
+    t.text     "drp02",      limit: 65535
+    t.text     "drs03",      limit: 65535
+    t.text     "dro03",      limit: 65535
+    t.text     "dra03",      limit: 65535
+    t.text     "drp03",      limit: 65535
+    t.text     "drs04",      limit: 65535
+    t.text     "dro04",      limit: 65535
+    t.text     "dra04",      limit: 65535
+    t.text     "drp04",      limit: 65535
+    t.text     "drs05",      limit: 65535
+    t.text     "dro05",      limit: 65535
+    t.text     "dra05",      limit: 65535
+    t.text     "drp05",      limit: 65535
+    t.string   "drt01"
+    t.string   "drt02"
+    t.string   "drt03"
+    t.string   "drt04"
+    t.string   "drt05"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "ereports", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "er01",       limit: 65535
+    t.text     "er02",       limit: 65535
+    t.text     "er03",       limit: 65535
+    t.text     "er04",       limit: 65535
+    t.text     "er05",       limit: 65535
+    t.string   "ert01"
+    t.string   "ert02"
+    t.string   "ert03"
+    t.string   "ert04"
+    t.string   "ert05"
+    t.string   "ers01"
+    t.string   "ers02"
+    t.string   "ers03"
+    t.string   "ers04"
+    t.string   "ers05"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "injections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -174,6 +224,71 @@ ActiveRecord::Schema.define(version: 20180219101853) do
     t.string   "ni15"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "nreports", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "nrs01",      limit: 65535
+    t.text     "nro01",      limit: 65535
+    t.text     "nra01",      limit: 65535
+    t.text     "nrp01",      limit: 65535
+    t.text     "nrs02",      limit: 65535
+    t.text     "nro02",      limit: 65535
+    t.text     "nra02",      limit: 65535
+    t.text     "nrp02",      limit: 65535
+    t.text     "nrs03",      limit: 65535
+    t.text     "nro03",      limit: 65535
+    t.text     "nra03",      limit: 65535
+    t.text     "nrp03",      limit: 65535
+    t.text     "nrs04",      limit: 65535
+    t.text     "nro04",      limit: 65535
+    t.text     "nra04",      limit: 65535
+    t.text     "nrp04",      limit: 65535
+    t.text     "nrs05",      limit: 65535
+    t.text     "nro05",      limit: 65535
+    t.text     "nra05",      limit: 65535
+    t.text     "nrp05",      limit: 65535
+    t.text     "nrs06",      limit: 65535
+    t.text     "nro06",      limit: 65535
+    t.text     "nra06",      limit: 65535
+    t.text     "nrp06",      limit: 65535
+    t.text     "nrs07",      limit: 65535
+    t.text     "nro07",      limit: 65535
+    t.text     "nra07",      limit: 65535
+    t.text     "nrp07",      limit: 65535
+    t.text     "nrs08",      limit: 65535
+    t.text     "nro08",      limit: 65535
+    t.text     "nra08",      limit: 65535
+    t.text     "nrp08",      limit: 65535
+    t.text     "nrs09",      limit: 65535
+    t.text     "nro09",      limit: 65535
+    t.text     "nra09",      limit: 65535
+    t.text     "nrp09",      limit: 65535
+    t.text     "nrs10",      limit: 65535
+    t.text     "nro10",      limit: 65535
+    t.text     "nra10",      limit: 65535
+    t.text     "nrp10",      limit: 65535
+    t.string   "nrt01"
+    t.string   "nrt02"
+    t.string   "nrt03"
+    t.string   "nrt04"
+    t.string   "nrt05"
+    t.string   "nrt06"
+    t.string   "nrt07"
+    t.string   "nrt08"
+    t.string   "nrt09"
+    t.string   "nrt10"
+    t.string   "nrm01"
+    t.string   "nrm02"
+    t.string   "nrm03"
+    t.string   "nrm04"
+    t.string   "nrm05"
+    t.string   "nrm06"
+    t.string   "nrm07"
+    t.string   "nrm08"
+    t.string   "nrm09"
+    t.string   "nrm10"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

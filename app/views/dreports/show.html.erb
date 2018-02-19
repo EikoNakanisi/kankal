@@ -1,0 +1,173 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">記録文章参照</font><BR>
+        ID : <%= @dreport.id %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+  <% if @dreport.id > 20 %>
+    <a href="../patients/<%= @dreport.id-@hensu2 %>#a5"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @dreport.id > 10 %>
+    <a href="../patients/<%= @dreport.id-@hensu1 %>#a5"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../patients/<%= @dreport.id %>#a5"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+<BR><BR>
+<BR>
+
+<div class="col-sm-5">
+<% unless @dreport.dro01.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【プログレスノート】<%= @dreport.drt01 %><br>
+  01版：<%= @dreport.drt01 %>　医師）医師太郎</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drs01) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dro01) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dra01) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drp01) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @dreport.dro02.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【プログレスノート】<%= @dreport.drt02 %><br>
+  01版：<%= @dreport.drt02 %>　医師）医師太郎</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drs02) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dro02) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dra02) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drp02) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @dreport.dro03.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【プログレスノート】<%= @dreport.drt03 %><br>
+  01版：<%= @dreport.drt03 %>　医師）医師太郎</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drs03) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dro03) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dra03) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drp03) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @dreport.dro04.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【プログレスノート】<%= @dreport.drt04 %><br>
+  01版：<%= @dreport.drt04 %>　医師）医師太郎</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drs04) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dro04) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dra04) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drp04) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @dreport.dro05.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【プログレスノート】<%= @dreport.drt05 %><br>
+  01版：<%= @dreport.drt05 %>　医師）医師太郎</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drs05) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dro05) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.dra05) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@dreport.drp05) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+
+<%= link_to 'edit', edit_dreport_path(@dreport) %>|
+<%= link_to 'Index', dreports_path %>
+
+</div>

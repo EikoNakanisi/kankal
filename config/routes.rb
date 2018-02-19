@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :dreports
   resources :nreports
   resources :ereports
+
   resources :instructions
 
 
