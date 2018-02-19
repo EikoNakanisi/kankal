@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   
   resources :injections
   resources :prescriptions
+  
   resources :dreports
   resources :nreports
   resources :ereports
