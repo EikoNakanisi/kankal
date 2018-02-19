@@ -15,8 +15,7 @@
     <td><%= prescription.pi01 %></td>
     <td><%= link_to 'Show', prescription %></td>
     <td><%= link_to 'Edit', edit_prescription_path(prescription) %></td>
-<!--     <td><%= link_to 'Destroy', prescription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
- -->
+
   </tr>
 <% end %>
 </table>
@@ -25,5 +24,4 @@
 
 
 <%= link_to 'New prescription', new_prescription_path %>|
-<%= link_to 'patienthome', patients_path %>|
-<%= link_to 'home', toppages_path %>
+<%= link_to 'Patientshome', patients_path %>
