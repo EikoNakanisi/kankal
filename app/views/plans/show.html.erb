@@ -1,0 +1,268 @@
+<!-- 看護問題リスト -->
+
+<div class="boxContainer">
+<div class="page-header">
+        <div class="headbox01">入院 病棟<br>緩和ケア</div>
+        <div class="headbox02">
+          <p class="sample1">ID : <%= @plan.id %><br>
+
+
+        ②後期　本人（30%）</p>
+        </div>
+        
+<div class="headbox03">
+<font size="6"><u>
+<% if @plan.id == 1 %>
+  <%= @name1 %>
+<% elsif @plan.id == 3 %>
+  <%= @name3 %>
+<% elsif @plan.id == 4 %>
+  <%= @name4 %>
+<% elsif @plan.id == 5 %>
+  <%= @name5 %>
+<% else %>
+  <%= @name7 %>
+<% end %>
+</u></font></div>
+        <div class="headbox05">
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+        </div>
+        <div class="headbox05">
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+        </div>
+        <div class="headbox04">
+          00歳00ヶ月&ensp;&ensp;&ensp;00型Rh(+)&ensp;&ensp;<u>000cm&ensp;000Kg</u></div>
+        <div class="headbox05">
+          <p class="sample1">
+<a href="/profiles/<%= @plan.id %>" class="btn btn-default btn-sm active" role="button">Prof</a><br>
+<a href="/profiles/<%= @plan.id %>" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
+          </p></div>
+<div class="headbox05">
+<a href="/beds" class="btn btn-warning btn-sm active" role="button">カルテ<br>閉じる</a>
+
+</div>
+</div>
+
+
+
+
+<div class="plan">
+        <div class="ao">&ensp;&ensp;看護問題リスト</div>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+<div class="space1"></div>
+<div class="space2">
+<br><br><br>
+
+</div>
+
+</div>
+
+
+<div class="space7">
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<tr>
+<th bgcolor="gainsboro" width="45"><font color="black"><center>No.</center></font></th>
+<th bgcolor="gainsboro" width="841"><font color="black"><center>内容</center></font></th>
+<th bgcolor="gainsboro" width="146"><font color="black"><center>登録日</center></font></th>
+<th bgcolor="gainsboro" width="119"><font color="black"><center>登録者</center></font></th>
+<th bgcolor="gainsboro" width="111"><font color="black"><center>評価日</center></font></th>
+<th bgcolor="gainsboro" width="74"><font color="black"><center>評価</center></font></th>
+<th bgcolor="gainsboro" width="146"><font color="black"><center>次回評価日</center></font></th>
+</tr>
+</table>
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<% unless @plan.npn01.blank? %>
+<tr>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/1">#01</a></b></td>
+<td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn01) %></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" width="120"></td>
+<td bgcolor="#FFFFFF" width="80"></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/22</td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np01) %></td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<% end %>
+</table>
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<% unless @plan.npn02.blank? %>
+<tr>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/2">#02</a></b></td>
+<td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn02) %></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" width="120"></td>
+<td bgcolor="#FFFFFF" width="80"></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/22</td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np02) %></td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<% end %>
+</table>
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<% unless @plan.npn03.blank? %>
+<tr>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/3">#03</a></b></td>
+<td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn03) %></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" width="120"></td>
+<td bgcolor="#FFFFFF" width="80"></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/22</td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np03) %></td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<% end %>
+</table>
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<% unless @plan.npn04.blank? %>
+<tr>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/4">#04</a></b></td>
+<td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn04) %></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" width="120"></td>
+<td bgcolor="#FFFFFF" width="80"></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/22</td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np04) %></td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<% end %>
+</table>
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<% unless @plan.npn05.blank? %>
+<tr>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/5">#05</a></b></td>
+<td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn05) %></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" width="120"></td>
+<td bgcolor="#FFFFFF" width="80"></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/22</td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np05) %></td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<% end %>
+</table>
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<tr>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/6">#06</a></b></td>
+<td bgcolor="#FFFFFF" width="850">4-2転倒・転落の危険性</td>
+<td bgcolor="#FFFFFF" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" width="120"></td>
+<td bgcolor="#FFFFFF" width="80"></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/22</td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">診断指標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850">起立・歩行に必要な筋力が不足している</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">関連因子</td>
+<td bgcolor="#FFFFFF" valign="top" width="850">倦怠感</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850">転倒・転落なくすごすことができる</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+</table>
+<table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<tr>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/7">#07</a></b></td>
+<td bgcolor="#FFFFFF" width="850">4-3褥創(瘡)の危険性</td>
+<td bgcolor="#FFFFFF" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" width="120"></td>
+<td bgcolor="#FFFFFF" width="80"></td>
+<td bgcolor="#FFFFFF" width="120">2018/01/22</td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">診断指標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850">圧迫・ずれ・摩擦・湿潤が生じやすい<br>重症度が高く、栄養状態が不良である状態</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">関連因子</td>
+<td bgcolor="#FFFFFF" valign="top" width="850">全身状態の低下(低アルブミン血症、耐糖能障害、貧血、発熱、低血圧、るいそう)</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+<tr>
+<td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
+<td bgcolor="#FFFFFF" valign="top" width="850">皮膚を性状に保つことができ、褥瘡形成がない</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+<td bgcolor="#FFFFFF" valign="top" width="80"></td>
+<td bgcolor="#FFFFFF" valign="top" width="120"></td>
+</tr>
+</table>
+
+
+
+<%= link_to 'edit', edit_plan_path(@plan) %>|
+<%= link_to 'Index', plans_path %>
+
+
+</div>
+
+

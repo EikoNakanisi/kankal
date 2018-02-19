@@ -10,7 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180219145417) do
+ActiveRecord::Schema.define(version: 20180219164659) do
+
+  create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "sihyou1"
+    t.string   "sihyou2"
+    t.string   "sihyou3"
+    t.string   "kanren1"
+    t.string   "kanren2"
+    t.string   "kanren3"
+    t.string   "endpoint1"
+    t.string   "endpoint2"
+    t.string   "endpoint3"
+    t.string   "nno01"
+    t.string   "nno02"
+    t.string   "nno03"
+    t.string   "nno04"
+    t.string   "nno05"
+    t.string   "nno06"
+    t.string   "nno07"
+    t.string   "nno08"
+    t.string   "nno09"
+    t.string   "nno10"
+    t.string   "nno11"
+    t.string   "nno12"
+    t.string   "nno13"
+    t.string   "nno14"
+    t.string   "nno15"
+    t.string   "nno16"
+    t.string   "nno17"
+    t.string   "nno18"
+    t.string   "nno19"
+    t.string   "nno20"
+    t.text     "nplan01",    limit: 65535
+    t.text     "nplan02",    limit: 65535
+    t.text     "nplan03",    limit: 65535
+    t.text     "nplan04",    limit: 65535
+    t.text     "nplan05",    limit: 65535
+    t.text     "nplan06",    limit: 65535
+    t.text     "nplan07",    limit: 65535
+    t.text     "nplan08",    limit: 65535
+    t.text     "nplan09",    limit: 65535
+    t.text     "nplan10",    limit: 65535
+    t.text     "nplan11",    limit: 65535
+    t.text     "nplan12",    limit: 65535
+    t.text     "nplan13",    limit: 65535
+    t.text     "nplan14",    limit: 65535
+    t.text     "nplan15",    limit: 65535
+    t.text     "nplan16",    limit: 65535
+    t.text     "nplan17",    limit: 65535
+    t.text     "nplan18",    limit: 65535
+    t.text     "nplan19",    limit: 65535
+    t.text     "nplan20",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "dinstructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "di01"
@@ -330,6 +384,21 @@ ActiveRecord::Schema.define(version: 20180219145417) do
     t.text     "ptn14",           limit: 65535
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+  end
+
+  create_table "plans", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "np01"
+    t.string   "np02"
+    t.string   "np03"
+    t.string   "np04"
+    t.string   "np05"
+    t.string   "npn01"
+    t.string   "npn02"
+    t.string   "npn03"
+    t.string   "npn04"
+    t.string   "npn05"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "prescriptions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
