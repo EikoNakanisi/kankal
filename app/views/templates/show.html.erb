@@ -1,0 +1,141 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">テンプレート参照</font><BR>
+        ID : <%= @template.id %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+
+  <% if @template.id > 20 %>
+    <a href="../patients/<%= @template.id-@hensu2 %>#a8"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @template.id > 10 %>
+    <a href="../patients/<%= @template.id-@hensu1 %>#a8"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../patients/<%= @template.id %>#a8"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+<div class="space5">
+<div class="col-sm-5">
+
+<% unless @template.tcon01.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna01 %>】<%= @template.tday01.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday01.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon01) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon02.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna02 %>】<%= @template.tday02.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday02.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon02) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon03.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna03 %>】<%= @template.tday03.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday03.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon03) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon04.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna04 %>】<%= @template.tday04.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday04.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon04) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon05.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna05 %>】<%= @template.tday05.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday05.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon05) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon06.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna06 %>】<%= @template.tday06.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday06.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon06) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon07.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna07 %>】<%= @template.tday07.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday07.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon07) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon08.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna08 %>】<%= @template.tday08.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday08.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon08) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @template.tcon09.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @template.tna09 %>】<%= @template.tday09.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @template.tday09.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@template.tcon09) %></font>
+  </div>
+</div>
+<% end %>
+
+
+<%= link_to 'edit', edit_template_path(@template) %>|
+<%= link_to 'Index', templates_path %>
+</div>
+</div>

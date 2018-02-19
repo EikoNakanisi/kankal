@@ -25,7 +25,13 @@ Rails.application.routes.draw do
   resources :nreports
   resources :ereports
 
-  resources :instructions
+  resources :templates
+  resources :results
 
+  resources :profiles
+  resources :nprofs
+  resources :plans do
+    resources :books
+  end
 
 end

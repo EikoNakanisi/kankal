@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180219140734) do
+ActiveRecord::Schema.define(version: 20180219145417) do
 
   create_table "dinstructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "di01"
@@ -460,6 +460,47 @@ ActiveRecord::Schema.define(version: 20180219140734) do
     t.datetime "ptj25"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "rday01",     limit: 65535
+    t.text     "rday02",     limit: 65535
+    t.text     "rday03",     limit: 65535
+    t.text     "rday04",     limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "templates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "tday01"
+    t.datetime "tday02"
+    t.datetime "tday03"
+    t.datetime "tday04"
+    t.datetime "tday05"
+    t.datetime "tday06"
+    t.datetime "tday07"
+    t.datetime "tday08"
+    t.datetime "tday09"
+    t.string   "tna01"
+    t.string   "tna02"
+    t.string   "tna03"
+    t.string   "tna04"
+    t.string   "tna05"
+    t.string   "tna06"
+    t.string   "tna07"
+    t.string   "tna08"
+    t.string   "tna09"
+    t.text     "tcon01",     limit: 65535
+    t.text     "tcon02",     limit: 65535
+    t.text     "tcon03",     limit: 65535
+    t.text     "tcon04",     limit: 65535
+    t.text     "tcon05",     limit: 65535
+    t.text     "tcon06",     limit: 65535
+    t.text     "tcon07",     limit: 65535
+    t.text     "tcon08",     limit: 65535
+    t.text     "tcon09",     limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
