@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-
+  before_action :require_user_logged_in
   def index
     #@books = Book.all
     @plan = Plan.find(params[:plan_id])

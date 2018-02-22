@@ -1,4 +1,5 @@
 class PrescriptionsController < ApplicationController
+  before_action :require_user_logged_in
   def index
     @prescriptions = Prescription.all
   end

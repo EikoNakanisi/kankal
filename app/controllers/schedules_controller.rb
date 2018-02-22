@@ -1,4 +1,5 @@
 class SchedulesController < ApplicationController
+  before_action :require_user_logged_in
   def index
       @patients = Patient.all
     @hensu1 = 10

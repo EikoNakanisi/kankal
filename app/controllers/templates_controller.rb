@@ -1,4 +1,5 @@
 class TemplatesController < ApplicationController
+  before_action :require_user_logged_in
   def index
     @templates = Template.all
   end

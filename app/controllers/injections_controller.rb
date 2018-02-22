@@ -1,4 +1,5 @@
 class InjectionsController < ApplicationController
+  before_action :require_user_logged_in
   def index
     @injections = Injection.all
   end

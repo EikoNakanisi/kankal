@@ -1,4 +1,5 @@
 class BedsController < ApplicationController
+  before_action :require_user_logged_in
   def index
       @patients = Patient.all
     @name1 = '北海 梅子'

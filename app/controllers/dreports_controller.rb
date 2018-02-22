@@ -1,4 +1,5 @@
 class DreportsController < ApplicationController
+  before_action :require_user_logged_in
   def index
     @dreports = Dreport.all
   end

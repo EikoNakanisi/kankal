@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  before_action :require_user_logged_in
   def show
     @patient = Patient.find(params[:id])
     @hensu1 = 10
