@@ -19,10 +19,11 @@
     <td><%= plan.npn02 %></td>
     <td><%= plan.npn03 %></td>
     <!-- added next line -->
-    <td><%= link_to 'Show books', plan_books_path(plan) %></td>
-    
     <td><%= link_to 'Show', plan %></td>
     <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+    <td><a href="../plans/<%= plan.id %>/details">Index details</a></td>
+    <td><a href="../plans/<%= plan.id %>/details/new">New details</a></td>
+
 <!--     <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
  -->
   </tr>

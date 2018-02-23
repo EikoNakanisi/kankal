@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   resources :profiles
   resources :nprofs
   resources :plans do
-    resources :books
+    resources :details
   end
 
 end

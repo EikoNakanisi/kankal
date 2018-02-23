@@ -1,0 +1,508 @@
+
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<!-- 左枠 -->
+<table class="table table-condensed table-bordered">
+  <tr>
+    <td bgcolor="#0000CD" align="left"><font color="#FFFFFF">&ensp;看護計画</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#B0C4DE" width="500" height="50">
+<button type="button" class="btn btn-default btn-sm active" disabled="disabled">ガイダンス</button>
+<button type="button" class="btn btn-default btn-sm active">評価記録</button>
+    </td>
+  </tr>
+</table>
+
+
+<table class="table table-condensed table-bordered">
+  <tr>
+    <td bgcolor="#dedede">問題番号</td>
+    <td><%= @detail.id %></td>
+    <td bgcolor="#dedede">登録日</td>
+    <td>2018/01/15</td>
+    <td bgcolor="#dedede">登録者</td>
+    <td>看護 花子</td>
+  </tr>
+  <tr>
+    <td bgcolor="#dedede"></td>
+    <td bgcolor="#dedede"></td>
+    <td bgcolor="#dedede">評価日</td>
+    <td>2018/01/22</td>
+    <td bgcolor="#dedede">評価</td>
+    <td></td>
+  </tr>
+</table>
+
+<table class="table table-condensed table-bordered">
+  <tr>
+    <td bgcolor="#dedede" width="70">看護問題</td>
+    <td width="400"><%= @detail.kanren3 %></td>
+  </tr>
+  <tr>
+    <td bgcolor="#dedede" width="70">Nursing<br>problem</td>
+    <td width="400"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#dedede" width="70">定義</td>
+    <td width="400"></td>
+  </tr>
+</table>
+
+<table class="table table-condensed table-bordered">
+  <tr>
+    <td bgcolor="#6A5ACD" align="center" width="50"><font color="#FFFFFF">決定根拠</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" width="150" height="50"></td>
+  </tr>
+</table>
+
+<!-- 外枠 -->
+<div class="y_data_area">
+    <!-- タイトル -->
+    <table class="y_data_title">
+        <col style="width: 20%;" />
+        <col style="width: 20%;" />
+
+        <tr>
+            <th>診断指標</th>
+            <th class="r_none">コメント</th>
+        </tr>
+    </table>
+    <!-- /タイトル -->
+    <!-- データ -->
+    <div class="y_scroll_box">
+        <div class="y_hidden">
+            <table class="y_data">
+                <col style="width: 50%;" />
+                <col style="width: 50%;" />                    
+                <tr>
+                    <td><p title="sihyou1"><%= @detail.sihyou1 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="sihyou2"><%= @detail.sihyou2 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="sihyou3"><%= @detail.sihyou3 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- /データ -->
+</div>
+<!-- /外枠 -->  
+<br>
+<!-- 外枠 -->
+<div class="y_data_area">
+    <!-- タイトル -->
+    <table class="y_data_title">
+        <col style="width: 20%;" />
+        <col style="width: 20%;" />
+
+        <tr>
+            <th>関連因子</th>
+            <th class="r_none">コメント</th>
+        </tr>
+    </table>
+    <!-- /タイトル -->
+    <!-- データ -->
+    <div class="y_scroll_box">
+        <div class="y_hidden">
+            <table class="y_data">
+                <col style="width: 50%;" />
+                <col style="width: 50%;" />                    
+                <tr>
+                    <td><p title="kanren1"><%= @detail.kanren1 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="kanren2"><%= @detail.kanren2 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- /データ -->
+</div>
+<!-- /外枠 -->
+
+
+</div><!-- /col-md-6 -->
+
+
+
+
+
+<div class="col-md-6">
+<!-- 右枠 -->
+<table class="table table-condensed table-bordered">
+  <tr>
+    <td bgcolor="#0000CD" align="left"><font color="#FFFFFF">&ensp;看護計画</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#B0C4DE" width="500" height="50" align="right" nowrap>
+<button type="button" class="btn btn-default btn-sm active" disabled="disabled">確定</button>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+    </td>
+  </tr>
+</table>
+
+
+<!-- 外枠 -->
+<div class="y_data_area">
+    <!-- タイトル -->
+    <table class="y_data_title">
+        <col style="width: 70%;" />
+        <col style="width: 20%;" />
+        <col style="width: 10%;" />
+
+        <tr>
+            <th>患者目標</th>
+            <th>評価日</th>
+            <th class="r_none">評価</th>
+        </tr>
+    </table>
+    <!-- /タイトル -->
+    <!-- データ -->
+    <div class="y_scroll_box">
+        <div class="y_hidden">
+            <table class="y_data">
+                <col style="width: 70%;" />
+                <col style="width: 20%;" />                    
+                <col style="width: 10%;" />                    
+                <tr>
+                    <td><p title="endpoint1"><%= @detail.endpoint1 %></p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="endpoint2"><%= @detail.endpoint2 %></p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="endpoint3"><%= @detail.endpoint3 %></p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+                <tr>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- /データ -->
+</div>
+<!-- /外枠 -->  
+<br>
+
+<div class="alert alert-success" role="alert">
+  表示切替
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 全て表示
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> ＯＰのみ
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> ＴＰのみ
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> ＥＰのみ
+</label>
+</div>
+
+
+
+
+<!-- 外枠 -->
+<div class="y_data_area2">
+    <!-- タイトル -->
+    <table class="y_data_title2">
+        <col style="width: 5%;" />
+        <col style="width: 5%;" />
+        <col style="width: 65%;" />
+        <col style="width: 5%;" />
+        <col style="width: 20%;" />
+        <tr>
+            <th></th>
+            <th></th>
+            <th>看護計画</th>
+            <th></th>
+            <th class="r_none">評価日</th>
+        </tr>
+    </table>
+    <!-- /タイトル -->
+    <!-- データ -->
+    <div class="y_scroll_box2">
+        <div class="y_hidden2">
+            <table class="y_data2">
+                <col style="width: 5%;" />
+                <col style="width: 5%;" />
+                <col style="width: 65%;" />
+                <col style="width: 5%;" />
+                <col style="width: 20%;" />                    
+
+
+    <tr>
+      <td><p title="nno"><%= @detail.nno01 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan01 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno02 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan02 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno03 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan03 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno04 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan04 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno05 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan05 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno06 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan06 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno07 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan07 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno08 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan08 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno09 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan09 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno10 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan10 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+
+    <tr>
+      <td><p title="nno"><%= @detail.nno11 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan11 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno12 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan12 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno13 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan13 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno14 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan14 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno15 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan15 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno16 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan16 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno17 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan17 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno18 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan18 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno19 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan19 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @detail.nno20 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @detail.nplan20 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/22</p></td>
+    </tr>
+
+
+            </table>
+        </div>
+    </div>
+    <!-- /データ -->
+</div>
+<!-- /外枠 -->
+</div>
+
+
+
+
+
+</div>
+</div>
+
+<%= link_to 'Edit', edit_plan_detail_path(@plan, @detail) %>|
+<%= link_to 'INDEX', plan_details_path(@plan) %>|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
